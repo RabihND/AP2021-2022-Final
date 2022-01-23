@@ -50,7 +50,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
----
 <p> <img src="./stuff/mastermind.jpg" width="600"> </p>  
 <p align="justify"><b>Mastermind</b> is a code-breaking game in which two players compete against each other. The game begins when the first participant, dubbed <b>"The Codemaker"</b>, generates a four-digit (color) code that is hidden. The second participant, dubbed <b>"The Codebreaker"</b> then guesses a code.</p>
 
@@ -71,24 +70,24 @@ Major frameworks/libraries used to this project:
 
 <!-- PARTS -->
 ## Parts
----
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- RESULTS -->
 ## Results
----
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
----
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- REFERENCES -->
 ## Refenences
----
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -96,7 +95,7 @@ Major frameworks/libraries used to this project:
 
 <!-- CONTACT -->
 ## Contacts
----
+
 
 Rabih ND - [@RabihND](https://github.com/RabihND) 
 
@@ -109,7 +108,7 @@ Hasan Sanei - [@hasansanei](https://github.com/hasansanei)
 
 <!-- ROADMAP -->
 ## Roadmap
----
+
 - [x] Write the main code-map.
 - [x] Design the GUI window. 
 - [ ] Write the core Functions.
