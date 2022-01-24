@@ -10,7 +10,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">MasterMind Game</h3>
+  <h3 align="center"> MasterMind Game🎲</h3>
 
   <p align="center">
    A "Mastermind" game designed with PyQt5 (Qt+Python)
