@@ -51,10 +51,11 @@
 
 ### Built With
 
-Major frameworks/libraries used to this project:
+Major frameworks/libraries used in this project:
 
 * [Python 3.10](https://www.python.org/)
 * [PyQt5](https://www.riverbankcomputing.com/software/pyqt/)
+* 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
