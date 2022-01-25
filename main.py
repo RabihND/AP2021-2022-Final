@@ -55,6 +55,113 @@ class MainWindow(object):
         self.oldGuessesTable.verticalHeader().setDefaultSectionSize(50)
         self.oldGuessesTable.verticalHeader().setMinimumSectionSize(0)
 
+        # Color Table
+        self.colorsTable = QtWidgets.QTableWidget(self.centralwidget)
+        self.colorsTable.setGeometry(QtCore.QRect(75, 630, 300, 50))
+        self.colorsTable.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.colorsTable.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.colorsTable.setRowCount(1)
+        self.colorsTable.setColumnCount(6)
+        self.colorsTable.setObjectName("colorsTable")
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 0, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 1, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 255, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 2, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 3, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 4, item)
+        item = QtWidgets.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(255, 0, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush)
+        item.setFlags(QtCore.Qt.ItemIsDragEnabled|QtCore.Qt.ItemIsUserCheckable|QtCore.Qt.ItemIsEnabled)
+        self.colorsTable.setItem(0, 5, item)
+        self.colorsTable.horizontalHeader().setVisible(False)
+        self.colorsTable.horizontalHeader().setDefaultSectionSize(50)
+        self.colorsTable.verticalHeader().setVisible(False)
+        self.colorsTable.verticalHeader().setDefaultSectionSize(50)
+
+        #Currently Guess Table
+        self.thisGuessTable = QtWidgets.QTableWidget(self.centralwidget)
+        self.thisGuessTable.setGeometry(QtCore.QRect(10, 530, 200, 50))
+        self.thisGuessTable.setAcceptDrops(True)
+        self.thisGuessTable.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.thisGuessTable.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.thisGuessTable.setRowCount(1)
+        self.thisGuessTable.setColumnCount(4)
+        self.thisGuessTable.setObjectName("thisGuessTable")
+        self.set_thisguesstable()
+        self.thisGuessTable.horizontalHeader().setVisible(False)
+        self.thisGuessTable.horizontalHeader().setDefaultSectionSize(50)
+        self.thisGuessTable.verticalHeader().setVisible(False)
+        self.thisGuessTable.verticalHeader().setDefaultSectionSize(50)
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        # Status Bar (For the AI Solver)
+        # self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        # self.statusbar.setObjectName("statusbar")
+        # MainWindow.setStatusBar(self.statusbar)
+        # self.statusbar.setSizeGripEnabled(False)
+
+        #Score Table
+        self.scoreTable = QtWidgets.QTableWidget(self.centralwidget)
+        self.scoreTable.setEnabled(False)
+        self.scoreTable.setGeometry(QtCore.QRect(230, 10, 200, 500))
+        self.scoreTable.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scoreTable.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scoreTable.setWordWrap(False)
+        self.scoreTable.setCornerButtonEnabled(False)
+        self.scoreTable.setRowCount(10)
+        self.scoreTable.setColumnCount(4)
+        self.scoreTable.setObjectName("scoreTable")
+        self.scoreTable.horizontalHeader().setVisible(False)
+        self.scoreTable.horizontalHeader().setDefaultSectionSize(10)
+        self.scoreTable.verticalHeader().setVisible(False)
+        self.scoreTable.verticalHeader().setDefaultSectionSize(50)
+
+
+        
+        #ResetButton
+        self.resetButton = QtWidgets.QPushButton(self.centralwidget)
+        self.resetButton.setGeometry(QtCore.QRect(230, 530, 200, 50))
+        self.resetButton.setObjectName("resetButton")
+        self.resetButton.clicked.connect(self.resetButtonClicked)
+
+
+        self.retranslateUi(MainWindow)
+        self.colorsTable.cellClicked['int','int'].connect(self.clicked_color)
+
+        #Submit Button
+        self.submitButton.clicked.connect(self.clicked_submit)
+
+        #Tries Label
+        self.triesLeft = QtWidgets.QLabel(self.centralwidget)
+        self.triesLeft.setGeometry(QtCore.QRect(175, 575, 300, 60))
+        self.triesLeft.setText("Attempts Left = 10")
+
 class GameOverWindow:
     """The resulting window, which shows the player's loss(+) or victory(-)"""
     pass
