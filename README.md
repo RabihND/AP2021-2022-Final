@@ -106,10 +106,9 @@ Hasan Sanei - [@hasansanei](https://github.com/hasansanei)
 ## Roadmap
 
 - [x] Write the main code-map.
-- [x] Design the GUI window. 
-- [ ] Write the core Functions.
-- [ ] 
-- [ ]
+- [ ] Design the GUI window. 
+- [x] Write the MasterMain Core Functions.
+- [ ] ...
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
