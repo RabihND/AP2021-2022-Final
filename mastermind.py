@@ -2,6 +2,7 @@
 import copy,random
 
 guess = None
+correct_list = None
 
 class MasterMind:
     """The main MasterMind game Process"""
