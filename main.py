@@ -1,5 +1,5 @@
 #Import Part
-# ...
+#
 from mastermind import MasterMind
 
 class MainWindow:
