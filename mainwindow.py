@@ -4,7 +4,7 @@ from mastermind import MasterMind
 from gameoverwindow import GameOverWindow
 
 
-class MainWindow(object):
+class MainWindowUi(object):
     """The main window of the game designed by Qt"""
     def __init__(self, MastermindObj):
         self.selectedColors = []
@@ -16,8 +16,13 @@ class MainWindow(object):
         self.__init__(MastermindObj)
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(450, 800)
-        MainWindow.setFixedSize(450, 800)
+        MainWindow.resize(450, 850)
+        MainWindow.setFixedSize(450, 850)
+        MainWindow.setStyleSheet((u"QMainWindow {	\n"
+                                                        "	background-color: rgb(56, 58, 89);	\n"
+                                                        "	color: rgb(220, 220, 220);\n"
+                                                        "}"))
+        
 
         #Main Window Icon
         icon = QtGui.QIcon()
@@ -137,10 +142,10 @@ class MainWindow(object):
                                                             "	border-radius: 10px;\n")
 
         # Status Bar (For the AI Solver)
-        # self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        # self.statusbar.setObjectName("statusbar")
-        # MainWindow.setStatusBar(self.statusbar)
-        # self.statusbar.setSizeGripEnabled(False)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.statusbar.setSizeGripEnabled(False)
 
         #Score Table
         self.scoreTable = QtWidgets.QTableWidget(self.centralwidget)
@@ -262,7 +267,7 @@ class MainWindow(object):
         choice = Dialog.exec_()
 
         if choice == QtWidgets.QDialog.Accepted:
-            self.setupUi(MainWindow, mastermind)
+            self.setupUi(MainWindowUi, mastermind)
             pass
         else:
             pass

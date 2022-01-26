@@ -22,7 +22,7 @@ class MasterMind:
             solution.append(random.randrange(0,6))
         return solution
 
-    def check_guess(self):
+    def check_guess(self,guess):
         """Returns the nb of "correct" and nb of "misplaced" guess"""
         correct = self.get_correct_colors(guess)
         misplaced = self.get_misplaced_colors(guess, correct)
@@ -33,7 +33,7 @@ class MasterMind:
         # print("Solution: ",self.solution)
         return correct.count(True), misplaced.count(True)
 
-    def get_correct_colors(self):
+    def get_correct_colors(self, guess):
         """Returns the "correct" colors"""
         correct_list = []
         for g, s in zip(guess, self.solution):
@@ -44,7 +44,7 @@ class MasterMind:
         return correct_list
         
 
-    def get_misplaced_colors(self):
+    def get_misplaced_colors(self, guess, correct_list):
         """Returns the "misplaced" colors"""
         mock_solution = copy.copy(self.solution)
         misplaced_list = []
@@ -65,7 +65,7 @@ class MasterMind:
 
 
 
-    def is_won(self):
+    def is_won(self,guess):
         """Verify that the guess is correct according to the solution"""
         for g, s in zip(guess, self.solution):
             if g != s:
