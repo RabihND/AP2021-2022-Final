@@ -27,12 +27,7 @@
 <details>
   <summary>Table of Contents</summary> 
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#parts">Parts</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#license">License</a></li>
@@ -56,10 +51,11 @@
 
 ### Built With
 
-Major frameworks/libraries used to this project:
+Major frameworks/libraries used in this project:
 
 * [Python 3.10](https://www.python.org/)
 * [PyQt5](https://www.riverbankcomputing.com/software/pyqt/)
+* 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -106,10 +102,9 @@ Hasan Sanei - [@hasansanei](https://github.com/hasansanei)
 ## Roadmap
 
 - [x] Write the main code-map.
-- [x] Design the GUI window. 
-- [ ] Write the core Functions.
-- [ ] 
-- [ ]
+- [ ] Design the GUI window. 
+- [x] Write the MasterMain Core Functions.
+- [ ] ...
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
