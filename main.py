@@ -161,6 +161,39 @@ class MainWindow(object):
         self.triesLeft = QtWidgets.QLabel(self.centralwidget)
         self.triesLeft.setGeometry(QtCore.QRect(175, 575, 300, 60))
         self.triesLeft.setText("Attempts Left = 10")
+    
+    def resetButtonClicked(self):
+        self.selectedColors = []
+        self.set_thisguesstable()
+
+    def set_thisguesstable(self):
+        item = QtWidgets.QTableWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsDropEnabled)
+        self.thisGuessTable.setItem(0, 0, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsDropEnabled)
+        self.thisGuessTable.setItem(0, 1, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsDropEnabled)
+        self.thisGuessTable.setItem(0, 2, item)
+        item = QtWidgets.QTableWidgetItem()
+        item.setFlags(QtCore.Qt.ItemIsDropEnabled)
+        self.thisGuessTable.setItem(0, 3, item)
+
+    def clicked_color(self, row, col):
+        if len(self.selectedColors) >= 4:
+            return
+        self.selectedColors.append(col)
+
+        item = self.thisGuessTable.item(0, len(self.selectedColors)-1)
+        color = self.colorsTable.item(row,col).background().color()
+        brush = QtGui.QBrush(color)
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setBackground(brush) 
+
+
+
+
 
 class GameOverWindow:
     """The resulting window, which shows the player's loss(+) or victory(-)"""
