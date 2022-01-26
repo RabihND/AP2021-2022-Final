@@ -1,6 +1,7 @@
 #Import Part
 #
 from mastermind import MasterMind
+from gameoverwindow import GameOverWindow
 
 class MainWindow:
     """The main window of the game designed by qt"""
