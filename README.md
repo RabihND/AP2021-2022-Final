@@ -1,12 +1,14 @@
 <div id="top"></div>
 
-<p align="center"><img src="./stuff/game.gif" width="110"></p>
+
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 
   <h3 align="center"> MasterMind Game🎲</h3>
+  <p align="center"><img src="./stuff/game.gif" width="110"></p>
   <p align="center">
    A "Mastermind" game designed with PyQt5 (Qt+Python)
     <br />
