@@ -8,7 +8,7 @@ class GameOverWindow(QtWidgets.QDialog):
         
 
     def setupUi(self, GameOverWindow):
-        GameOverWindow.setObjectName("gameoverDialog")
+        GameOverWindow.setObjectName("GAME OVER")
         GameOverWindow.resize(268, 142)
         GameOverWindow.setFixedSize(268, 142)
         self.buttonBox = QtWidgets.QDialogButtonBox(GameOverWindow)
@@ -27,3 +27,11 @@ class GameOverWindow(QtWidgets.QDialog):
         QtCore.QMetaObject.connectSlotsByName(GameOverWindow)
 
         self.display_text()
+
+        def display_text(self):
+            self.label.setText("You " + self.text + " the game. \nWant to try again?")
+
+        def retranslateUi(self, gameoverDialog):
+            _translate = QtCore.QCoreApplication.translate
+            gameoverDialog.setWindowTitle( _translate("GAME OVER", "Game over"))
+            self.label.setText(_translate("GAMEOVER", "You Won !!. \nWant to try again?"))
