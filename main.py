@@ -25,7 +25,7 @@ class MainWindowUi(object):
 
         #Main Window Icon
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("pngegg.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./stuff/pngegg.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
 
         #Central widget
