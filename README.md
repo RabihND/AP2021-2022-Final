@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-
+<h1 align="center"> AP course project  </h1>
 
 
 <!-- PROJECT LOGO -->
@@ -53,31 +53,79 @@ Major frameworks/libraries used in this project:
 
 * [Python 3.10](https://www.python.org/)
 * [PyQt5](https://www.riverbankcomputing.com/software/pyqt/)
-* 
+* [CX_Freeze](https://github.com/marcelotduarte/cx_Freeze)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- PARTS -->
 ## Parts
+**1. Master Mind Class**
+
+The main MasterMind game Process; it contains:
+- **get_random_solution()**:  Returns a random "solution" to be the hidden code.
+- **check_guess()**: Returns the nb of "correct" and nb of "misplaced" guess.
+- **get_correct_colors()**: Returns the "correct" colors.
+- **get_misplaced_colors()**: Returns the "misplaced" colors.
+- **is_won()**: Verify that the guess is correct according to the solution.
+ 
+**2. MainWindowUi  Class** (GUI_Window)
+
+The main window of the game designed by Qt; it contains:
+- **setupUi()**: The QT codes that generate the main window.
+- **resetButtonClicked()**:  That delete the selected colors.
+- **set_thisguesstable()**: connect the colors.
+- **clicked_color()**: Send the selected colors to the Guess table.
+- **clicked_submit()**:  After clicking the submit button; its check the guess and return the score to the Scores Table.
+- **show_game_over()**: Show the Game Over Dialog.
+-**print_score()**: print score in the terminal (NOT GUI).
+
+**3. GameOverWindow Class** (GUI_Window)
+
+The resulting window, which shows the player's loss(+) or victory(-).
+- **display_text()**: Return a text with include the result of the game.(Win/Loss)
+
+**4. Splash Screen Class** (GUI_Windows)
+>{⌛} 
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- RESULTS -->
 ## Results
 
+**GUI OUTPUT:**
+<details>
+<summary>ScreenShoot Preview 🖼️</summary>
+  <body>
+    <p align="center"> <img src="./stuff/GUI_output.jpg" width="200"> </p>
+  </body>
+</details>
+
+---
+
+**TERMINAL OUTPUT:**
+<details>
+<summary>ScreenShoot Preview 🖼️</summary>
+  <body>
+    <p align="center"> <img src="./stuff/terminal_output.jpg" width="300"> </p>
+  </body>
+</details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
 
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- REFERENCES -->
 ## Refenences
 
+🔎
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -102,7 +150,10 @@ Hasan Sanei - [@hasansanei](https://github.com/hasansanei)
 - [x] Write the main code-map.
 - [x] Design the GUI window. 
 - [x] Write the MasterMain Core Functions.
-- [ ] ...
+- [x] Design the GameOver window.
+- [x] <a href="https://github.com/RabihND/AP2021-2022-Final/releases/latest"><strong>Build the .EXE Release</strong></a>
+- [ ] Splash screen
+- [ ] Build APK release.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
