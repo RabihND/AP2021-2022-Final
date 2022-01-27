@@ -1,5 +1,9 @@
 #Import Part
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import  QColor
+# from PySide2.QtWidgets import *
+# from PySide2.QtGui import  QColor
 from mastermind import MasterMind
 from gameoverwindow import GameOverWindow
 
@@ -20,7 +24,22 @@ class MainWindowUi(object):
         MainWindow.setStyleSheet((u"QMainWindow {	\n"
                                                         "	background-color: rgb(56, 58, 89);	\n"
                                                         "	color: rgb(220, 220, 220);\n"
+                                                        "border-radius: 3px;\n"
+                                                        " opacity: 100;\n"
+                                                        "border: 3px solid #5c5f91;\n"
                                                         "}"))
+
+        ## REMOVE TITLE BAR
+        MainWindow.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        # MainWindow.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+        ## DROP SHADOW EFFECT
+        # MainWindow.shadow = QGraphicsDropShadowEffect()
+        # MainWindow.shadow.setBlurRadius(20)
+        # MainWindow.shadow.setXOffset(0)
+        # MainWindow.shadow.setYOffset(0)
+        # MainWindow.shadow.setColor(QColor(0, 0, 0, 60))
+        # MainWindow.dropShadowFrame.setGraphicsEffect(MainWindow.shadow)
         
 
         #Main Window Icon
@@ -28,9 +47,22 @@ class MainWindowUi(object):
         icon.addPixmap(QtGui.QPixmap("./stuff/pngegg.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
 
+        
+
         #Central widget
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        
+        #Drop shadow
+#         self.dropShadowFrame = QFrame(self.centralwidget)
+#         self.dropShadowFrame.setObjectName(u"dropShadowFrame")
+#         self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
+# "	background-color: rgb(56, 58, 89);	\n"
+# "	color: rgb(220, 220, 220);\n"
+# "	border-radius: 10px;\n"
+# "}")
+#         self.dropShadowFrame.setFrameShape(QFrame.StyledPanel)
+#         self.dropShadowFrame.setFrameShadow(QFrame.Raised)
 
         #Submit Button (design)
         self.submitButton = QtWidgets.QPushButton(self.centralwidget)
@@ -123,6 +155,7 @@ class MainWindowUi(object):
         self.colorsTable.setStyleSheet("	background-color: rgb(157, 191, 199);	\n"
                                            "	color: rgb(220, 220, 220);\n"
                                            "	border-radius: 10px;\n")
+                                           
 
         #Currently Guess Table
         self.thisGuessTable = QtWidgets.QTableWidget(self.centralwidget)
@@ -144,10 +177,10 @@ class MainWindowUi(object):
                                                             "	border-radius: 10px;\n")
 
         # Status Bar (For the AI Solver)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.statusbar.setSizeGripEnabled(False)
+        # self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        # self.statusbar.setObjectName("statusbar")
+        # MainWindow.setStatusBar(self.statusbar)
+        # self.statusbar.setSizeGripEnabled(False)
 
         #Score Table
         self.scoreTable = QtWidgets.QTableWidget(self.centralwidget)
@@ -200,6 +233,27 @@ class MainWindowUi(object):
                                                       "font-size: 12pt;\n"
                                                       "font-family: Kristen ITC;\n"
                                                       "text-align: center;\n")
+
+        #Exit Button
+        self.exitbutton = QtWidgets.QPushButton(self.centralwidget)
+        self.exitbutton.setGeometry(10, 10, 40, 40)
+        self.exitbutton.setFlat(True)
+        self.exitbutton.setIcon(QtGui.QIcon("./stuff/exit_button.png"))
+        self.exitbutton.setIconSize(QtCore.QSize(40, 40))
+        self.exitbutton.setAcceptDrops(False)
+        self.exitbutton.setObjectName("exitbutton")
+        self.exitbutton.setStyleSheet((u"QtWidgets.QPushButton: focus { \n"
+                                    "background-color: transparent;\n"
+    	                            "border: 0px;\n"
+                                	"outline: none;\n"
+                                    "}\n"
+                                    "QtWidgets.QPushButton: hover { background: #e5f1fb; }"))
+
+                                    # "QtWidgets.QPushButton:hover {\n"
+                                    # " border-image: url(:/stuff/logo.png);\n"
+                                    # "background-repeat: no-repeat;\n"
+                                    # "}"))
+        self.exitbutton.clicked.connect(lambda: app.quit())
     
     def resetButtonClicked(self):
         self.selectedColors = []
