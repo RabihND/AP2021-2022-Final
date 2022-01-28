@@ -2,10 +2,8 @@
 
 <h1 align="center"> AP course project  </h1>
 
-
-![NB Lines][line-sheild]
-![Downloads][download-sheild]
 ![Version][version-sheild]
+![Downloads][download-sheild]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
