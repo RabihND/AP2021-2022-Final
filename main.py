@@ -1,7 +1,7 @@
 #Import Part
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import  QColor
+# from PyQt5.QtGui import  QColor
 # from PySide2.QtWidgets import *
 # from PySide2.QtGui import  QColor
 from mastermind import MasterMind
