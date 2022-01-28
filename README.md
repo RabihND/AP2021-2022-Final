@@ -2,13 +2,20 @@
 
 <h1 align="center"> AP course project  </h1>
 
-![Version][version-sheild]
-![Downloads][download-sheild]
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![MIT License][license-shield]][license-url]
-
+<p align="center">
+    <a alt="Version">
+        <img src="https://img.shields.io/github/v/release/RabihND/AP2021-2022-Final?color=14adfa&logo=Semantic%20Web&logoColor=14adfa&style=for-the-badge" /></a>
+    <a  alt="Downloads">
+        <img src="https://img.shields.io/github/downloads/RabihND/AP2021-2022-Final/total?logo=App%20Store&logoColor=white&style=for-the-badge" /></a>
+    <a href="https://github.com/RabihND/AP2021-2022-Final/graphs/contributors" alt="Contributers">
+        <img src="https://img.shields.io/github/contributors/RabihND/AP2021-2022-Final?color=6fd671&logo=WhiteSource&style=for-the-badge" /></a>
+    <a href="https://github.com/RabihND/AP2021-2022-Final//network/members" alt="Forks">
+        <img src="https://img.shields.io/github/forks/RabihND/AP2021-2022-Final?color=cccccc&logo=Node-RED&style=for-the-badge" /></a>
+    <a href=" https://github.com/RabihND/AP2021-2022-Final/stargazers">
+        <img src="https://img.shields.io/github/stars/RabihND/AP2021-2022-Final?color=8e6be8&logo=Ethereum&logoColor=8e6be8&style=for-the-badge" alt="Stars"></a>
+    <a href="https://github.com/RabihND/AP2021-2022-Final/master/LICENSE.txt">
+        <img src="https://img.shields.io/github/license/RabihND/AP2021-2022-Final?color=%2363afdb&logo=letsencrypt&style=for-the-badge" alt="License"></a>
+</p>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -178,16 +185,4 @@ Amirkabir University  of Technology</b>
 </div>
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[version-sheild]: https://img.shields.io/github/v/release/RabihND/AP2021-2022-Final?color=14adfa&logo=Semantic%20Web&logoColor=14adfa&style=for-the-badge
-[download-sheild]: https://img.shields.io/github/downloads/RabihND/AP2021-2022-Final/total?logo=App%20Store&logoColor=white&style=for-the-badge
-[line-sheild]: https://img.shields.io/tokei/lines/github/RabihND/AP2021-2022-Final?color=green&logo=visualstudiocode&style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/RabihND/AP2021-2022-Final?color=6fd671&logo=WhiteSource&style=for-the-badge
-[contributors-url]: https://github.com/RabihND/AP2021-2022-Final/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RabihND/AP2021-2022-Final?color=cccccc&logo=Node-RED&style=for-the-badge
-[forks-url]: https://github.com/RabihND/AP2021-2022-Final//network/members
-[stars-shield]: https://img.shields.io/github/stars/RabihND/AP2021-2022-Final?color=8e6be8&logo=Ethereum&logoColor=8e6be8&style=for-the-badge
-[stars-url]: https://github.com/RabihND/AP2021-2022-Final/stargazers
-[license-shield]: https://img.shields.io/github/license/RabihND/AP2021-2022-Final?color=%2363afdb&logo=letsencrypt&style=for-the-badge
-[license-url]: https://github.com/RabihND/AP2021-2022-Final/master/LICENSE.txt
+
