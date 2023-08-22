@@ -13,10 +13,10 @@
         <img src="https://img.shields.io/github/forks/RabihND/AP2021-2022-Final?color=cccccc&logo=Node-RED&style=for-the-badge" /></a>
     <a href=" https://github.com/RabihND/AP2021-2022-Final/stargazers">
         <img src="https://img.shields.io/github/stars/RabihND/AP2021-2022-Final?color=8e6be8&logo=Ethereum&logoColor=8e6be8&style=for-the-badge" alt="Stars" /></a>
-    <!-- <a alt="Visitors">
-        <img src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=RabihND/AP2021-2022-Final?color=14adfa&logo=Android&style=for-the-badge" /></a> -->
     <a href="https://github.com/RabihND/AP2021-2022-Final/master/LICENSE.txt">
         <img src="https://img.shields.io/github/license/RabihND/AP2021-2022-Final?color=%2363afdb&logo=letsencrypt&style=for-the-badge" alt="License"></a>
+    <a alt="Visitors">
+        <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FRabihND%2FAP2021-2022-Final&label=Visitors&countColor=%23263759&style=flat-square labelStyle=upper"/></a>
     
 </p>
 
